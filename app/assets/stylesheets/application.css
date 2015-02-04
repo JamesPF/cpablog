@@ -1,0 +1,706 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+ */
+
+/* FRONT END */
+/* HOME PAGE */
+.top-nav {
+  background-color: rgba(128,128,128,0.5);
+  position: absolute;
+  width: 100%;
+  height: 50px;
+  margin-left: -8px;
+  margin-top: -8px;
+}
+
+.top-nav ul {
+  float: right;
+  margin-right: 20%;
+}
+
+.top-nav ul a {
+  text-align: center;
+  text-decoration: none;
+  color: black;
+  font-size: 22px;
+  font-family: Arial;
+}
+
+.top-nav ul a li {
+  display: inline-block;
+  height: 31px;
+  width: 70px;
+  margin-top: -8px;
+  margin-right: -4px;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: rgba(128,128,128,0.2);
+}
+
+.top-nav ul a li:hover {
+  background-color: rgba(128,128,128,0.7);
+}
+
+.logo {
+  background: rgba(70,156,241,1);
+  background: -moz-linear-gradient(left, rgba(70,156,241,1) 0%, rgba(195,222,247,1) 20%, rgba(255,255,255,1) 50%, rgba(195,222,247,1) 79%, rgba(70,156,241,1) 100%);
+  background: -webkit-gradient(left top, right top, color-stop(0%, rgba(70,156,241,1)), color-stop(20%, rgba(195,222,247,1)), color-stop(50%, rgba(255,255,255,1)), color-stop(79%, rgba(195,222,247,1)), color-stop(100%, rgba(70,156,241,1)));
+  background: -webkit-linear-gradient(left, rgba(70,156,241,1) 0%, rgba(195,222,247,1) 20%, rgba(255,255,255,1) 50%, rgba(195,222,247,1) 79%, rgba(70,156,241,1) 100%);
+  background: -o-linear-gradient(left, rgba(70,156,241,1) 0%, rgba(195,222,247,1) 20%, rgba(255,255,255,1) 50%, rgba(195,222,247,1) 79%, rgba(70,156,241,1) 100%);
+  background: -ms-linear-gradient(left, rgba(70,156,241,1) 0%, rgba(195,222,247,1) 20%, rgba(255,255,255,1) 50%, rgba(195,222,247,1) 79%, rgba(70,156,241,1) 100%);
+  background: linear-gradient(to right, rgba(70,156,241,1) 0%, rgba(195,222,247,1) 20%, rgba(255,255,255,1) 50%, rgba(195,222,247,1) 79%, rgba(70,156,241,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#469cf1', endColorstr='#469cf1', GradientType=1 );
+  width: 100%;
+  height: 270px;
+  margin-top: -8px;
+  margin-left: -8px;
+  padding-right: 16px;
+}
+
+.logo img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 55px; 
+}
+
+.featured {
+  background-image: url('images/books.jpg');
+  background-size: cover;
+  background-repeat: none;
+  background-attachment: fixed;
+  width: 100%;
+  min-height: 270px;
+  margin-left: -8px;
+  padding-right: 16px;
+}
+
+.headline {
+/*  background-color: green;*/
+  display: inline-block;
+  float: left;
+  width: 48%;
+  min-height: 150px;
+  margin-left: 5%;
+  margin-right: 2%;
+}
+
+.headline h3 {
+  background-color: rgba(0,0,0,0.4);
+  font-family: Arial;
+  font-size: 36px;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.important-articles {
+  background-color: rgba(0,0,0,0.4);
+  display: inline-block;
+  width: 40%;
+  min-height: 150px;
+  margin-top: 20px;
+  margin-bottom: 15px;
+  color: white;
+  border-radius: 10px;
+}
+
+.important-articles h1 {
+  font-family: Arial;
+  margin-left: 20px;
+}
+
+.important-articles h2 {
+  margin-left: 20px;
+  font-family: Arial;
+}
+
+.important-articles a {
+  color: white;
+}
+
+.recent {
+  background-color: rgb(224,224,224);
+  width: 100%;
+  min-height: 250px;
+  margin-left: -8px;
+  padding-right: 16px;
+}
+
+.recent h2 {
+  margin-top: -10px;
+  margin-left: 6.25%;
+  margin-bottom: 10px;
+  padding-top: 20px;
+  font-family: Arial;
+}
+
+.recent-post {
+  background-color: rgb(192,192,192);
+  vertical-align: top;
+  display: inline-block;
+  width: 25%;
+  min-height: 160px;
+  margin-left: 6.25%;
+  margin-bottom: 30px;
+  border-radius: 10px;
+}
+
+.recent-post a {
+  text-decoration: none;
+  color: black;
+}
+
+.recent-post p {
+  font-family: Arial;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.footer {
+  background-color: black;
+  position: absolute;
+  width: 100%;
+  height: 50px;
+  margin-left: -8px;
+  clear: all;
+}
+
+.footer p {
+  color: white;
+  text-align: center;
+}
+
+
+
+/* ABOUT PAGE */
+.site-header {
+  width: 100%;
+  height: 200px;
+  margin-left: -8px;
+  margin-top: -8px;
+  padding-right: 16px;
+}
+
+.site-header img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.site-menu {
+  display: block;
+  margin: 0 auto;
+  width: 260px;
+}
+
+.site-menu ul {
+  list-style: none;
+  padding-left: 0px;
+}
+
+.site-menu ul li {
+  background-color: rgb(224,224,224);
+  display: inline-block;
+  width: 32%;
+  border-radius: 5px;
+}
+
+.site-menu ul li:hover {
+  background-color: rgb(192,192,192);
+}
+
+.site-menu ul a {
+  font-family: Arial;
+  font-size: 28px;
+  text-align: center;
+  color: black;
+}
+
+.content {
+  background-color: rgb(224,224,224);
+  width: 80%;
+  min-height: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  overflow: hidden;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.about {
+  float: left;
+  display: inline-block;
+  width: 55%;
+  min-height: 500px;
+}
+
+.about h1 {
+  font-family: Arial;
+  margin-left: 15px;
+}
+
+.about p {
+  font-family: Arial;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.about h2 {
+  font-family: Arial;
+  margin-left: 15px;
+}
+
+.about h3 {
+  display: inline-block;
+  margin-left: 15px;
+  margin-top: 0px;
+}
+
+.about .contact-info {
+  display: inline-block;
+  margin-top: 0px;
+}
+
+.about-image {
+  display: inline-block;
+  width: 45%;
+  min-height: 350px;
+}
+
+.about-image img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 25px;
+  border-radius: 3px;
+}
+
+
+/* BLOG */
+/* BLOG INDEX */
+.blog-content {
+  background-color: rgb(224,224,224);
+  width: 50%;
+  min-height: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  overflow: hidden;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.blog-content hr {
+  width: 90%;
+}
+
+.blog-article {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.blog-article h2 {
+  font-family: Arial;
+  margin-bottom: 5px;
+}
+
+.blog-article h3 {
+  margin-top: 0px;
+}
+
+.blog-article h4 {
+  margin-top: 0px;
+}
+
+.blog-article p {
+  font-family: Arial;
+  margin-bottom: 10px;
+}
+
+.blog-article a {
+  color: black;
+  text-decoration: none;
+}
+
+.single-article {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 100px;
+}
+
+.single-article h1 {
+  font-family: Arial;
+}
+
+.single-article p {
+  font-family: Arial;
+  margin-bottom: 10px;
+}
+
+
+
+
+/* BACK END */
+/* LOGIN */
+.login-header img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.login {
+  width: 400px;
+  height: 230px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  border: 1px solid #222;
+  border-radius: 5px;
+}
+
+.login h1 {
+  font-family: Arial;
+  text-align: center;
+  color: #222;
+}
+
+#login-form {
+/*  background-color: green;*/
+  width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: Arial;
+  font-size: 20px;
+}
+
+#login-form input {
+  font-family: Arial;
+  font-size: 20px;
+  height: 34px;
+  width: 300px;
+  border: 1px solid #222;
+  border-radius: 3px;
+  margin-bottom: 10px;
+}
+
+
+/* SETTINGS */
+.admin-header {
+  width: 100%;
+  height: 200px;
+}
+
+.admin-header p {
+  font-family: Arial;
+  font-size: 22px;
+}
+
+.admin-header a {
+  color: black;
+  text-decoration: none;
+}
+
+.admin-header img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -55px;
+}
+
+.admin-menu {
+  display: block;
+  margin: 0 auto;
+  width: 350px;
+}
+
+.admin-menu ul {
+  list-style: none;
+  padding-left: 0px;
+}
+
+.admin-menu ul li {
+  background-color: rgb(224,224,224);
+  display: inline-block;
+  min-width: 32%;
+  border-radius: 5px;
+}
+
+.admin-menu ul li:hover {
+  background-color: rgb(192,192,192);
+}
+
+.admin-menu ul a {
+  font-family: Arial;
+  font-size: 28px;
+  text-align: center;
+  color: black;
+}
+
+.password {
+  width: 400px;
+  height: 230px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  border: 1px solid #222;
+  border-radius: 5px;
+}
+
+.password h1 {
+  font-family: Arial;
+  font-size: 28px;
+  text-align: center;
+  color: #222;
+}
+
+#password-form {
+/*  background-color: green;*/
+  width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: Arial;
+  font-size: 20px;
+}
+
+#password-form input {
+  font-family: Arial;
+  font-size: 20px;
+  height: 34px;
+  width: 300px;
+  border: 1px solid #222;
+  border-radius: 3px;
+  margin-bottom: 10px;
+}
+
+
+
+/* ABOUT INDEX */
+.about-menu {
+  width: 400px;
+  height: 160px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  border: 1px solid #222;
+  border-radius: 5px;
+}
+
+.about-menu h2 {
+  text-align: center;
+  font-family: Arial;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 8px;
+  border: 1px solid #222;
+  border-radius: 5px;
+}
+
+#edit-about {
+  width: 200px;
+}
+
+#create-about {
+  width: 280px;
+}
+
+.about-menu a {
+  color: black;
+  text-decoration: none;
+}
+
+
+
+/* ABOUT NEW --- ABOUT EDIT */
+.about-entries {
+  width: 850px;
+  min-height: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  margin-bottom: 60px;
+  border: 1px solid #222;
+  border-radius: 5px;
+}
+
+.about-entries #about-back {
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+.about-entries a {
+  font-family: Arial;
+  color: black;
+  text-decoration: none;
+}
+
+.about-entries h1 {
+  text-align: center;
+  font-family: Arial;
+  margin-top: -25px;
+}
+
+.about-entries label {
+  margin-left: 20px;
+  font-family: Arial;
+  font-size: 18px;
+}
+
+.about-entries input {
+  margin-left: 20px;
+  border: 1px solid #222;
+  border-radius: 3px;
+}
+
+.about-entries input {
+  width: 200px;
+  height: 28px;
+  font-family: Arial;
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+.about-entries input[type='textarea'] {
+  width: 800px;
+  height: 300px;
+}
+
+.about-entries input[type='submit'] {
+  cursor: pointer;
+  outline: none;
+}
+
+
+/* POSTS INDEX */
+.posts-container {
+  width: 900px;
+  height: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+}
+
+#new-post {
+  float: left;
+  width: 100px;
+  margin-top: 0px;
+  margin-left: 20px;
+  font-family: Arial;
+  padding: 3px;
+  text-align: center;
+  border: 1px solid #222;
+  border-radius: 5px;
+}
+
+.posts-container a {
+  color: black;
+  text-decoration: none;
+}
+
+.posts {
+  width: 600px;
+  min-height: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid #222;
+  border-radius: 5px;
+}
+
+.posts h1 {
+  text-align: center;
+  font-family: Arial;
+  margin-top: 0px;
+  padding-top: 15px;
+}
+
+.posts table {
+  width: 100%;
+  font-family: Arial;
+  margin-left: 15px;
+}
+
+
+
+/* NEW POST */
+.post-entries {
+  width: 850px;
+  min-height: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  margin-bottom: 60px;
+  border: 1px solid #222;
+  border-radius: 5px;
+}
+
+.post-entries #post-back {
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+.post-entries a {
+  font-family: Arial;
+  color: black;
+  text-decoration: none;
+}
+
+.post-entries h1 {
+  text-align: center;
+  font-family: Arial;
+  margin-top: -25px;
+}
+
+.post-entries label {
+  margin-left: 20px;
+  font-family: Arial;
+  font-size: 18px;
+}
+
+.post-entries input {
+  margin-left: 20px;
+  border: 1px solid #222;
+  border-radius: 3px;
+}
+
+.post-entries input {
+  width: 200px;
+  height: 28px;
+  font-family: Arial;
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+.post-entries input[type='textarea'] {
+  width: 800px;
+  height: 300px;
+}
+
+.post-entries input[type='submit'] {
+  cursor: pointer;
+  outline: none;
+}
+
+
+
+
+
+
+
+
+
+
+

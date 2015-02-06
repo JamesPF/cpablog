@@ -10,6 +10,7 @@ class SessionsController < ApplicationController
       redirect to posts_path
     else
       render "new"
+    end
   end
 
   def destroy

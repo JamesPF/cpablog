@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
 
   def new
-    @user.User.new
+    @user = User.new
   end
 
   def create
@@ -11,6 +11,7 @@ class UsersController < ApplicationController
       redirect to posts_path
     else
       render "new"
+    end
   end
 
   def edit

@@ -15,6 +15,7 @@ class PostsController < ApplicationController
       redirect_to posts_path
     else
       redirect_to @post
+    end
   end
 
   def show
@@ -31,6 +32,7 @@ class PostsController < ApplicationController
       redirect_to posts_path
     else
       render 'edit'
+    end
   end
 
   def destroy

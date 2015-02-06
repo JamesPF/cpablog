@@ -15,6 +15,7 @@ class BiosController < ApplicationController
       redirect_to bios_path
     else
       redirect_to @bio
+    end
   end
 
   def edit
@@ -27,6 +28,7 @@ class BiosController < ApplicationController
       redirect_to bios_path
     else
       render 'edit'
+    end
   end
 
   def bio_params

@@ -12,36 +12,23 @@
     </div>
     <div class="site-menu">
       <ul>
-        <a href="index.html"><li>Home</li></a>
-        <a href="about.html"><li>About</li></a>
-        <a href="blog.html"><li>Blog</li></a>
+        <li><%= link_to 'Home', root_path %></li>
+        <li><%= link_to 'About', about_path %></li>
+        <li><%= link_to 'Blog', blog_path %></li>
       </ul>
     </div>
   </div>
   <div class="blog-content">
-    <div class="blog-article">
-      <h2><a href="#">Blog Article Title Goes Here</a></h2>
-      <h3>January 25, 2015</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum erat nunc, eleifend sed orci non, commodo mollis nunc. Integer lacinia turpis lectus, sed laoreet lacus tempus ac. Etiam fringilla purus id lacus ullamcorper ultricies. Proin iaculis sit amet sem convallis fringilla. Donec sed mi quis diam ultrices tincidunt sed sed turpis. Phasellus vel quam aliquam, semper mauris sit amet, lobortis ante. Vestibulum ut malesuada ex. Mauris consectetur odio ac mauris rutrum, sit amet imperdiet purus feugiat...</p>
-      <h4><a href="">Read More...</a></h4>
-    </div>
-    <br>
-    <hr>
-    <div class="blog-article">
-      <h2><a href="#">Blog Article Title Goes Here</a></h2>
-      <h3>January 25, 2015</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum erat nunc, eleifend sed orci non, commodo mollis nunc. Integer lacinia turpis lectus, sed laoreet lacus tempus ac. Etiam fringilla purus id lacus ullamcorper ultricies. Proin iaculis sit amet sem convallis fringilla. Donec sed mi quis diam ultrices tincidunt sed sed turpis. Phasellus vel quam aliquam, semper mauris sit amet, lobortis ante. Vestibulum ut malesuada ex. Mauris consectetur odio ac mauris rutrum, sit amet imperdiet purus feugiat...</p>
-      <h4><a href="">Read More...</a></h4>
-    </div>
-    <br>
-    <hr>
-    <div class="blog-article">
-      <h2><a href="#">Blog Article Title Goes Here</a></h2>
-      <h3>January 25, 2015</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum erat nunc, eleifend sed orci non, commodo mollis nunc. Integer lacinia turpis lectus, sed laoreet lacus tempus ac. Etiam fringilla purus id lacus ullamcorper ultricies. Proin iaculis sit amet sem convallis fringilla. Donec sed mi quis diam ultrices tincidunt sed sed turpis. Phasellus vel quam aliquam, semper mauris sit amet, lobortis ante. Vestibulum ut malesuada ex. Mauris consectetur odio ac mauris rutrum, sit amet imperdiet purus feugiat...</p>
-      <h4><a href="">Read More...</a></h4>
-    </div>
-    <br>
+    <% @article.each do |a| %>
+      <div class="blog-article">
+        <h2><%= link_to a.title, a %></a></h2>
+        <h3><%= a.date %></h3>
+        <p><%= a.content %></p>
+        <h4><%= link_to 'Read More...', a %></h4>
+      </div>
+      <br>
+      <hr>
+    <% end %>
   </div>
   <div class="footer">
     <p>Copyright 2015 &copy; Michael Felz PC</p>

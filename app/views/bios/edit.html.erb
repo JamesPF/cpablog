@@ -9,30 +9,24 @@
     <img src="images/michael_felz_pc_med.png" height="150" width="401">
     <div class="admin-menu">
       <ul>
-        <a href="posts-index.html"><li>Posts</li></a>
-        <a href="about-index.html"><li>About</li></a>
-        <a href="settings.html"><li>Settings</li></a>
+        <%= link_to posts_path do %><li>Posts</li><% end %>
+        <%= link_to bios_path do %><li>About</li><% end %>
+        <%= link_to settings_path do %><li>Settings</li><% end %>
       </ul>
     </div>
   </div>
   <div class="about-entries">
-    <p id="about-back"><a href="#">Back</a></p>
+    <%= link_to bios_path do %><p id="about-back">Back</p><% end %>
     <h1>Edit Your About Page</h1>
-    <form class="about-info">
-      <label>Bio:</label>
-      <br>
-      <input type="textarea">
-      <br>
-      <label>Phone (optional):</label>
-      <br>
-      <input type="tel">
-      <br>
-      <label>Email (optional):</label>
-      <br>
-      <input type="email">
-      <br>
-      <input type="submit">
-    </form>
+    <%= form_for(@bio, :url => {:action => :update, :controller => :bios}, class: 'about-info' ) do |b| %>
+      <%= b.label :content %><br>
+      <%= b.text_area :content %><br>
+      <%= b.label :phone %><br>
+      <%= b.text_field :phone %><br>
+      <%= b.label :email %><br>
+      <%= b.text_field :email %><br>
+      <%= b.submit "Update Bio" %>
+    <% end %>
   </div>
 </body>
 </html>

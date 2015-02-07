@@ -9,31 +9,33 @@
     <img src="images/michael_felz_pc_med.png" height="150" width="401">
     <div class="admin-menu">
       <ul>
-        <a href="posts-index.html"><li>Posts</li></a>
-        <a href="about-index.html"><li>About</li></a>
-        <a href="settings.html"><li>Settings</li></a>
+        <%= link_to posts_path do %><li>Posts</li><% end %>
+        <%= link_to bios_path do %><li>About</li><% end %>
+        <%= link_to settings_path do %><li>Settings</li><% end %>
       </ul>
     </div>
   </div>
   <div class="post-entries">
-    <p id="post-back"><a href="#">Back</a></p>
+    <p id="post-back"><%= link_to 'Back', posts_path %></a></p>
     <h1>Edit Post</h1>
-    <label>Title:</label>
-    <input type="text">
-    <label>Date:</label>
-    <input type="date">
-    <br>
-    <label>Content:</label>
-    <br>
-    <input type="textarea">
-    <br>
-    <label>Page Title:</label>
-    <input type="text">
-    <br>
-    <label>Meta Description:</label>
-    <input type="text">
-    <br>
-    <input type="submit">
+    <%= form_for(@post, :url => {:action => :update, :controller => :posts} ) do |p| %>
+      <%= p.label :title %>
+      <%= p.text_field :title %>
+      <%= p.label :date %>
+      <%= p.date_field :date %>
+      <br>
+      <%= p.label :content %><br>
+      <%= p.text_area :content %>
+      <br>
+      <%= p.label :page_title %>
+      <%= p.text_field :page_title %>
+      <br>
+      <%= p.label :meta_description %>
+      <br>
+      <%= p.text_area :meta_description, class: 'm-description' %>
+      <br>
+      <%= p.submit "Update" %>
+    <% end %>
   </div>
 </body>
 </html>

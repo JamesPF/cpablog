@@ -9,15 +9,17 @@
     <img src="images/michael_felz_pc_med.png" height="150" width="401">
     <div class="admin-menu">
       <ul>
-        <a href="posts-index.html"><li>Posts</li></a>
-        <a href="about-index.html"><li>About</li></a>
-        <a href="settings.html"><li>Settings</li></a>
+        <%= link_to posts_path do %><li>Posts</li><% end %>
+        <%= link_to bios_path do %><li>About</li><% end %>
+        <%= link_to settings_path do %><li>Settings</li><% end %>
       </ul>
     </div>
   </div>
   <div class="about-menu">
-    <h2 id="edit-about"><a href="about-edit.html">Edit About Page</a></h2>
-    <h2 id="create-about"><a href="about-new.html">Create New About Page</a></h2>
+    <h2 id="create-about"><%= link_to "Create New About Page", new_bio_path %></h2>
+    <% if @bio %>
+      <h2 id="edit-about"><%= link_to "Edit Current About Page", edit_bio_path(@bio) %></h2>
+    <% end %>
   </div>
 </body>
 </html>

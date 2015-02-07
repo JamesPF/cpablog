@@ -9,25 +9,27 @@
     <img src="images/michael_felz_pc_med.png" height="150" width="401">
     <div class="admin-menu">
       <ul>
-        <a href="posts-index.html"><li>Posts</li></a>
-        <a href="about-index.html"><li>About</li></a>
-        <a href="settings.html"><li>Settings</li></a>
+        <%= link_to posts_path do %><li>Posts</li><% end %>
+        <%= link_to bios_path do %><li>About</li><% end %>
+        <%= link_to settings_path do %><li>Settings</li><% end %>
       </ul>
     </div>
   </div>
   <div class="posts-container">
-    <h3 id="new-post"><a href="#">New Post<a/></h3>
+    <h3 id="new-post"><%= link_to 'New Post', new_post_path %></h3>
     <div class="posts">
       <h1>Manage Your Blog Posts</h1>
       <table>
         <thead>
-          <tr>
-            <td>Date</td>
-            <td>Post Title Goes Here...</td>
-            <td>View</td>
-            <td>Edit</td>
-            <td>Delete</td>
-          </tr>
+          <% @post.each do |post|  %>
+            <tr>
+              <td><%= post.date %></td>
+              <td><%= post.title %></td>
+              <td><%= link_to 'Preview', post_path(post) %></td>
+              <td><%= link_to 'Edit', edit_post_path(post) %></td>
+              <td><%= link_to 'Delete', delete_post_path(post), method: :delete, data: {confirm: 'Are you sure?'} %></td>
+            </tr>
+          <% end %>
       </table>
     </div>
   </div>

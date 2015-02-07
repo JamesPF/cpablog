@@ -539,7 +539,7 @@
 /* ABOUT INDEX */
 .about-menu {
   width: 400px;
-  height: 160px;
+  min-height: 80px;
   margin-left: auto;
   margin-right: auto;
   margin-top: 30px;
@@ -558,7 +558,7 @@
 }
 
 #edit-about {
-  width: 200px;
+  width: 280px;
 }
 
 #create-about {
@@ -608,9 +608,7 @@
 }
 
 .about-entries input {
-  margin-left: 20px;
-  border: 1px solid #222;
-  border-radius: 3px;
+  
 }
 
 .about-entries input {
@@ -619,11 +617,23 @@
   font-family: Arial;
   font-size: 16px;
   margin-bottom: 15px;
+  margin-left: 20px;
+  border: 1px solid #222;
+  border-radius: 3px;
 }
 
-.about-entries input[type='textarea'] {
-  width: 800px;
-  height: 300px;
+.about-entries textarea {
+  min-width: 800px;
+  max-width: 800px;
+  min-height: 300px;
+  max-height: 300px;
+  font-family: Arial;
+  font-size: 16px;
+  margin-bottom: 15px;
+  margin-left: 20px;
+  border: 1px solid #222;
+  border-radius: 3px;
+  overflow: scroll;
 }
 
 .about-entries input[type='submit'] {
@@ -718,22 +728,34 @@
 }
 
 .post-entries input {
-  margin-left: 20px;
-  border: 1px solid #222;
-  border-radius: 3px;
-}
-
-.post-entries input {
   width: 200px;
   height: 28px;
   font-family: Arial;
   font-size: 16px;
   margin-bottom: 15px;
+  margin-left: 20px;
+  border: 1px solid #222;
+  border-radius: 3px;
 }
 
-.post-entries input[type='textarea'] {
+.post-entries textarea {
   width: 800px;
   height: 300px;
+  font-family: Arial;
+  font-size: 16px;
+  margin-bottom: 15px;
+  margin-left: 20px;
+  border: 1px solid #222;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.post-entries .m-description {
+  min-width: 600px;
+  max-width: 600px;
+  min-height: 50px;
+  max-height: 50px;
+  overflow: scroll;
 }
 
 .post-entries input[type='submit'] {

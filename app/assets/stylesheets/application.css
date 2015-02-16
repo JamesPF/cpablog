@@ -14,13 +14,14 @@
 
 /* FRONT END */
 /* HOME PAGE */
+/* Change margin-top to -8px when making changes */
 .top-nav {
-  background-color: rgba(128,128,128,0.5);
+  background-color: rgba(128,128,128,0.15);
   position: absolute;
   width: 100%;
   height: 50px;
   margin-left: -8px;
-  margin-top: -8px;
+  margin-top: -16px;
 }
 
 .top-nav ul {
@@ -44,12 +45,12 @@
   padding-top: 10px;
   padding-left: 10px;
   padding-right: 10px;
-  background-color: rgba(128,128,128,0.2);
+  background-color: rgba(128,128,128,0.15);
   vertical-align: top;
 }
 
 .top-nav ul li:hover {
-  background-color: rgba(128,128,128,0.7);
+  background-color: rgba(128,128,128,0.3);
 }
 
 .top-nav a {
@@ -57,7 +58,9 @@
   color: black;
 }
 
+/* Take out postion:absolute and z-index when adding other features */
 .logo {
+  position: absolute;
   background: rgba(70,156,241,1);
   background: -moz-linear-gradient(left, rgba(70,156,241,1) 0%, rgba(195,222,247,1) 20%, rgba(255,255,255,1) 50%, rgba(195,222,247,1) 79%, rgba(70,156,241,1) 100%);
   background: -webkit-gradient(left top, right top, color-stop(0%, rgba(70,156,241,1)), color-stop(20%, rgba(195,222,247,1)), color-stop(50%, rgba(255,255,255,1)), color-stop(79%, rgba(195,222,247,1)), color-stop(100%, rgba(70,156,241,1)));
@@ -67,17 +70,61 @@
   background: linear-gradient(to right, rgba(70,156,241,1) 0%, rgba(195,222,247,1) 20%, rgba(255,255,255,1) 50%, rgba(195,222,247,1) 79%, rgba(70,156,241,1) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#469cf1', endColorstr='#469cf1', GradientType=1 );
   width: 100%;
-  height: 270px;
+  min-height: 100%;
   margin-top: -8px;
   margin-left: -8px;
   padding-right: 16px;
+  z-index: -1;
 }
 
+/* Change padding-top to 55px when making changes */
 .logo img {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  padding-top: 55px; 
+  padding-top: 125px; 
+}
+
+.hp-nav {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  width: 174px;
+/*  background-color: red;*/
+}
+
+.hp-about {
+  display: inline-block;
+  background-color: rgb(150,150,150);
+  font-family: Arial;
+  font-size: 24px;
+  padding: 5px;
+  border-radius: 5px;
+  width: 70px;
+  text-align: center;
+}
+
+.hp-about a {
+  text-decoration: none;
+  color: black;
+}
+
+.hp-blog {
+  display: inline-block;
+  background-color: rgb(150,150,150);
+  font-family: Arial;
+  font-size: 24px;
+  padding: 5px;
+  border-radius: 5px;
+  width: 70px;
+  margin-left: 10px;
+  text-align: center;
+}
+
+.hp-blog a {
+  text-decoration: none;
+  color: black;
 }
 
 .featured {
@@ -174,6 +221,7 @@
 }
 
 .footer {
+  display: none;
   background-color: black;
   position: absolute;
   width: 100%;

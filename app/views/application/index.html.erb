@@ -4,16 +4,24 @@
   <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-  <div class="top-nav">
+<!--   <div class="top-nav">
     <ul>
       <li><%= link_to 'About', about_path %></li>
       <li><%= link_to 'Blog', blog_path %></li>
     </ul>
-  </div>
+  </div> -->
   <div class="logo">
-    <img src="images/michael_felz_pc.png" height="200" width="534">
+    <img src="assets/michael_felz_pc.png" height="200" width="534">
+    <div class="hp-nav">
+      <div class="hp-about">
+        <%= link_to 'About', about_path %>
+      </div>
+      <div class="hp-blog">
+        <%= link_to 'Blog', blog_path %>
+      </div>
+    </div>
   </div>
-  <div class="featured">
+<!--   <div class="featured">
     <div class="headline">
       <h3>Some sort of headline that describes the website and its purpose will go here.</h3>
     </div>
@@ -38,7 +46,7 @@
       <h2><a href="#">Post Title Goes Here</a></h2>
       <p>A preview of the post will go here, and will eventually be cut off.  It will run for several lines and it will automatically concatenate at the end.  You will be able to click on the title or a 'view more' button to read further.</p>
     </div>
-  </div>
+  </div> -->
   <div class="footer">
     <p>Copyright 2015 &copy; Michael Felz PC</p>
   </div>

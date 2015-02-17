@@ -1,0 +1,8 @@
+
+# Default page title when nothing else is specified
+default_title: Michael Felz PC
+
+# Default meta description is an empty string due to the
+# fact that duplicate meta descriptions are known to be
+# poor SEO practice
+meta_description: ''

@@ -572,7 +572,7 @@
   color: #222;
 }
 
-#password-form {
+.password-form {
 /*  background-color: green;*/
   width: 300px;
   margin-left: auto;
@@ -581,7 +581,7 @@
   font-size: 20px;
 }
 
-#password-form input {
+.password-form input {
   font-family: Arial;
   font-size: 20px;
   height: 34px;

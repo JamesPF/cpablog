@@ -17,7 +17,9 @@
     </div>
   </div>
   <div class="post-view">
-    <p id="go-back"><%= link_to 'Go back', posts_path %></a></p>
+    <% if current_user %>
+      <p id="go-back"><%= link_to 'Go back', posts_path %></a></p>
+    <% end %>
     <h1><%= @post.title %></h1>
     <h3><%= @post.date %></h3>
     <p><%= @post.content %></p>

@@ -16,15 +16,13 @@
     </div>
     <div class="password">
       <h1>Change Your Password</h1>
-      <form id="password-form">
-        <label>New Password:</label>
-        <br>
-        <input type="password">
-        <br>
-        <label>Password Confirmation:</label>
-        <br>
-        <input type="password">
-      </form>
+      <%= form_for @user, :html => {class: "password-form"} do |f| %>
+        <%= f.label :password %><br />
+        <%= f.password_field :password, :required => true %>
+        <%= f.label :password_confirmation %><br />
+        <%= f.password_field :password_confirmation, :required => true %>
+        <%= f.submit "Update Password" %>
+      <% end %>
     </div>
   </div>
 </body>

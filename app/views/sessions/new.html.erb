@@ -9,15 +9,13 @@
   </div>
   <div class="login">
     <h1>Please Sign In</h1>
-    <form id="login-form">
-      <label>Email:</label>
-      <br>
-      <input type="text">
-      <br>
-      <label>Password:</label>
-      <br>
-      <input type="password">
-    </form>
+    <%= form_tag sessions_path, :html => {class: "login-form"} do %>
+      <%= label_tag :email %><br>
+      <%= email_field_tag :email %><br>
+      <%= label_tag :password %><br>
+      <%= password_field_tag :password %>
+      <%= submit_tag "Log In" %>
+    <% end %>
   </div>
 </body>
 </html>

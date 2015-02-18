@@ -7,7 +7,7 @@ class SessionsController < ApplicationController
     user = User.where(email: params[:email]).first
     if user && user.authenticate(params[:password])
       session[:user_id] = user.id
-      redirect to posts_path
+      redirect_to posts_path
     else
       render "new"
     end

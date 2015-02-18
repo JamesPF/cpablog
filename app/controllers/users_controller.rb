@@ -5,13 +5,11 @@ class UsersController < ApplicationController
   end
 
   def create
-    @user = User.new(user_params)
-    if @user.save
-      session[:user_id] = @user.user_id
-      redirect to posts_path
-    else
-      render "new"
-    end
+    @user = User.new(params.require(:user).permit(:email, :password, :password_confirmation))
+    @user.save
+    session[:user_id] = @user.id
+    id = User.last[:id]
+    redirect_to posts_path
   end
 
   def edit

@@ -5,24 +5,19 @@
 </head>
 <body>
   <div class="login-header">
-    <img src="images/michael_felz_pc.png" height="200" width="534">
+    <%= image_tag "michael_felz_pc.png" %>
   </div>
   <div class="signup">
     <h1>New User</h1>
-    <form id="signup-form">
-      <label>Email:</label>
-      <br>
-      <input type="text">
-      <br>
-      <label>Password:</label>
-      <br>
-      <input type="password">
-       <label>Password Confirmation:</label>
-      <br>
-      <input type="password">
-      <br>
-      <input type="submit">
-    </form>
+    <%= form_for @user, :html => {class: "signup-form"} do |f| %>
+      <%= f.label :email %><br />
+      <%= f.text_field :email %>
+      <%= f.label :password %><br />
+      <%= f.password_field :password, :required => true %>
+      <%= f.label :password_confirmation %><br />
+      <%= f.password_field :password_confirmation, :required => true %>
+      <%= f.submit "Sign Up" %>
+    <% end %>
   </div>
 </body>
 </html>

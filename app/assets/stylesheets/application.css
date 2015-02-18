@@ -434,7 +434,7 @@
   color: #222;
 }
 
-#login-form {
+.login-form {
 /*  background-color: green;*/
   width: 300px;
   margin-left: auto;
@@ -443,7 +443,7 @@
   font-size: 20px;
 }
 
-#login-form input {
+.login-form input {
   font-family: Arial;
   font-size: 20px;
   height: 34px;
@@ -453,8 +453,9 @@
   margin-bottom: 10px;
 }
 
-#login-form input[type="submit"] {
+.login-form input[type="submit"] {
   margin-top: 15px;
+  margin-bottom: 25px;
   cursor: pointer;
 }
 
@@ -496,6 +497,7 @@
 
 .signup-form input[type="submit"] {
   margin-top: 15px;
+  margin-bottom: 25px;
   cursor: pointer;
 }
 

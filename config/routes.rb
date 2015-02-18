@@ -12,7 +12,7 @@ Michaelfelzpc::Application.routes.draw do
 
   delete 'posts/:id', to: 'posts#destroy', as: :delete_post
 
-  root 'application#index'
+  root 'home#show', as: :home
 
   get 'about/' => 'about#show', as: :about
   get 'blog/' => 'blog#index', as: :blog
